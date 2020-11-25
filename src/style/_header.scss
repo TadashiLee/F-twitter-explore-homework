@@ -1,0 +1,29 @@
+@import "variables";
+@import "mixins";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $container-padding-y $container-padding-x;
+  border: 1px $border-color solid;
+}
+
+.logo {
+  text-align: center;
+}
+
+.nav-list {
+  display: flex;
+  > li {
+    margin-left: 5px;
+  }
+}
+
+.signin-button {
+  @include btn-variant($white, $primary-color);
+}
+
+.login-button {
+  @include btn-variant($primary-color, $body-bg);
+}
