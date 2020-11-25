@@ -1,0 +1,70 @@
+@import "variables";
+@import "mixins";
+@import "extends";
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  border: 1px $border-color solid;
+  border-radius: $border-radius-base;
+}
+
+.title {
+  @extend .bases-padding;
+  margin-top: 0;
+}
+
+.form {
+  @extend .bases-padding;
+}
+
+.option {
+  padding: $container-padding-y 0;
+}
+
+.title {
+  color: $white;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-input {
+  background-color: $body-bg;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  border: none;
+  border-bottom: 1px $border-color solid;
+  margin: 10px 0;
+}
+
+.hint {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-signin-button {
+  @include btn-variant($white, $primary-color);
+  width: 100%;
+}
+
+.form-login-button {
+  @include btn-variant($primary-color, $body-bg);
+  width: 100%;
+}
